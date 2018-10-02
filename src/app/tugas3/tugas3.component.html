@@ -1,0 +1,15 @@
+<label>Tugas 3</label><br>
+<button 
+  class="btn btn-primary"   
+  (click)="onCreationStatus()">Tampilkan Detail</button>
+<p>
+  {{tulisan}}
+</p>
+
+<p
+*ngFor="let x of log; let j = index"
+  [ngClass] ="{online: x>3}"
+  [ngStyle] ="{'background-color': x>3 ? 'salmon' : 'white'}"
+  >
+  {{x}}
+</p>
